@@ -13,21 +13,19 @@
 <body>
 <a class="skip-link" href="#youtube-link">Hopp til lenkene</a>
 <main class="artwork">
-  <img class="homepage-image" src="assets/homepage.png" width="941" height="1672" alt="" fetchpriority="high">
+  <picture>
+    <source media="(min-width: 700px)" srcset="assets/homepage-wide.png">
+    <img class="homepage-image" src="assets/homepage.png" width="941" height="1672" alt="Håndtegnet Dunderfela Allstars hjemmeside" fetchpriority="high">
+  </picture>
+  <img class="original-logo" src="assets/logo-transparent.png" alt="Dunderfela Allstars-logo">
   <div class="sr-only"><h1>Dunderfela Allstars</h1><h2>Bandet</h2><p>Gard — fele. Igor — gitar. Tøsse — trekkspill.</p><h2>Kontakt</h2></div>
-  <a class="hotspot contact-target" style="--x:7;--y:48.3;--w:27;--h:2.5" href="mailto:gard@nergaard.org" aria-label="Send e-post til Gard"></a>
-  <a class="hotspot contact-target" style="--x:9;--y:51.5;--w:22;--h:2.5" href="tel:+4740627993" aria-label="Ring Gard"></a>
-  <a class="hotspot contact-target" style="--x:38;--y:48.3;--w:26;--h:2.5" href="mailto:dunderov@gmail.com" aria-label="Send e-post til Igor"></a>
-  <a class="hotspot contact-target" style="--x:40;--y:51.5;--w:22;--h:2.5" href="tel:+4792242585" aria-label="Ring Igor"></a>
-  <a class="hotspot contact-target" style="--x:68;--y:48.3;--w:29;--h:2.5" href="mailto:igrarecords@gmail.com" aria-label="Send e-post til Tøsse"></a>
-  <a class="hotspot contact-target" style="--x:71;--y:51.5;--w:23;--h:2.5" href="tel:+4795798465" aria-label="Ring Tøsse"></a>
   <nav aria-label="Klikk: sosiale medier, galleri, press kit og live show">
-    <button id="youtube-link" class="hotspot" style="--x:7;--y:63;--w:25;--h:11.3" data-destination="youtube" aria-label="YouTube"><span class="hover-window" aria-hidden="true"></span></button>
-    <button class="hotspot" style="--x:38;--y:63;--w:25;--h:11.3" data-destination="facebook" aria-label="Facebook"><span class="hover-window" aria-hidden="true"></span></button>
-    <button class="hotspot" style="--x:68;--y:63;--w:25;--h:11.3" data-destination="instagram" aria-label="Instagram"><span class="hover-window" aria-hidden="true"></span></button>
-    <button class="hotspot" style="--x:7;--y:75.5;--w:25;--h:11.4" data-dialog="gallery-dialog" aria-label="Galleri"><span class="hover-window" aria-hidden="true"></span></button>
-    <button class="hotspot" style="--x:38;--y:75.5;--w:25;--h:11.4" data-destination="pressKit" data-fallback-dialog="press-dialog" aria-label="Press kit"><span class="hover-window" aria-hidden="true"></span></button>
-    <button class="hotspot" style="--x:68;--y:75.5;--w:25;--h:11.4" data-destination="liveShows" data-fallback-dialog="live-dialog" aria-label="Live show"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="youtube-link" class="hotspot" style="--x:12;--y:66;--w:23;--h:10.5" data-destination="youtube" aria-label="YouTube"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="facebook-link" class="hotspot" style="--x:40;--y:66;--w:22;--h:10.5" data-destination="facebook" aria-label="Facebook"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="instagram-link" class="hotspot" style="--x:69;--y:66;--w:22;--h:10.5" data-destination="instagram" aria-label="Instagram"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="gallery-link" class="hotspot" style="--x:12;--y:78.5;--w:24;--h:11" data-dialog="gallery-dialog" aria-label="Galleri"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="press-link" class="hotspot" style="--x:41;--y:78.5;--w:21;--h:11" data-destination="pressKit" data-fallback-dialog="press-dialog" aria-label="Press kit"><span class="hover-window" aria-hidden="true"></span></button>
+    <button id="live-link" class="hotspot" style="--x:70;--y:78.5;--w:21;--h:11" data-destination="liveShows" data-fallback-dialog="live-dialog" aria-label="Live show"><span class="hover-window" aria-hidden="true"></span></button>
   </nav>
 </main>
   <dialog id="gallery-dialog" aria-labelledby="gallery-title"><div class="dialog-heading"><h2 id="gallery-title">galleri</h2><button class="close-dialog" aria-label="Lukk galleri">×</button></div><div class="photo-grid">
