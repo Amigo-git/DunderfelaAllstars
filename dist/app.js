@@ -1,9 +1,7 @@
-// Add the band's final destination URLs here when they are ready.
 const destinations = {
-  youtube: null,
-  facebook: null,
-  instagram: null,
-  videos: null,
+  youtube: 'https://www.youtube.com/@Dunderfela',
+  facebook: 'https://www.facebook.com/dunderfelaallstars',
+  instagram: 'https://www.instagram.com/dunderfela/',
   pressKit: null,
   liveShows: null,
 };
