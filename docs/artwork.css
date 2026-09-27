@@ -32,11 +32,11 @@ dialog{color:#24221e;background:#fff;border:1px solid #716b60;border-radius:3px 
  .wide-contacts .person{max-width:195px}.wide-icons .tile{max-width:110px}.wide-click{width:95px}.wide-footer{width:165px;margin-top:0}
 }
 
-/* Sampled from the paper around the original handwritten artwork. */
-html,body{background:#fefdf9}
+/* Paper tone sampled between Tøsse and the accordion on the original sketch. */
+html,body{background:#f7f6f4}
 
 /* One unaltered sketch is the homepage at every viewport size. */
 .sheet{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;margin:0!important;padding:0!important;isolation:auto!important}
-.original-sketch{display:block;position:relative;width:100%;line-height:0}.original-sketch>img{display:block;width:100%;height:auto}.original-sketch~*{display:none!important}.phone{display:none!important}
+.original-sketch{display:block;position:relative;width:100%;line-height:0}.original-sketch>img{display:block;width:100%;height:auto;filter:contrast(1.12);mix-blend-mode:multiply}.original-sketch~*{display:none!important}.phone{display:none!important}
 .sketch-target{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border:0;border-radius:4px;background:transparent;cursor:pointer;padding:0;line-height:normal}.sketch-target:focus-visible{outline:2px dashed #5a564d;outline-offset:3px}
 @media(max-width:600px){.sheet{display:block!important}.original-sketch{width:100%}}
