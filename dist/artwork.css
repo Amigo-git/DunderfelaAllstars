@@ -32,11 +32,11 @@ dialog{color:#24221e;background:#fff;border:1px solid #716b60;border-radius:3px 
  .wide-contacts .person{max-width:195px}.wide-icons .tile{max-width:110px}.wide-click{width:95px}.wide-footer{width:165px;margin-top:0}
 }
 
-/* Warm, bright paper tone across the sketch and page. */
-html,body{background:#f5e8cc}
+/* Pale paper tone from the original scan around the icons. */
+html,body{background:#f8f7fc}
 
-/* One unaltered sketch is the homepage at every viewport size. */
+/* Keep the original sketch and its drawn icon interiors at every size. */
 .sheet{display:block!important;width:100%!important;max-width:none!important;min-height:0!important;margin:0!important;padding:0!important;isolation:auto!important}
-.original-sketch{display:block;position:relative;width:100%;line-height:0}.original-sketch>img{display:block;width:100%;height:auto;filter:contrast(1.5);mix-blend-mode:multiply}.original-sketch~*{display:none!important}.phone{display:none!important}
-.sketch-target{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border:0;border-radius:4px;background:transparent;cursor:pointer;padding:0;line-height:normal}.sketch-target:focus-visible{outline:2px dashed #5a564d;outline-offset:3px}
+.original-sketch{display:block;position:relative;width:100%;line-height:0;background:#f8f7fc;isolation:isolate}.icon-paper{position:absolute;inset:0;width:100%;height:100%;fill:#fff;pointer-events:none}.original-sketch>img{position:relative;display:block;width:100%;height:auto;filter:contrast(1.5);mix-blend-mode:multiply}.original-sketch~*{display:none!important}.phone{display:none!important}
+.sketch-target{position:absolute;z-index:1;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border:0;border-radius:4px;background:transparent;cursor:pointer;padding:0;line-height:normal}.sketch-target:focus-visible{outline:2px dashed #5a564d;outline-offset:3px}
 @media(max-width:600px){.sheet{display:block!important}.original-sketch{width:100%}}
