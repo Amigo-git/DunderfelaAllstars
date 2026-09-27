@@ -1,51 +1,9 @@
-const destinations = {
-  youtube: 'https://www.youtube.com/@Dunderfela',
-  facebook: 'https://www.facebook.com/dunderfelaallstars',
-  instagram: 'https://www.instagram.com/dunderfela/',
-  pressKit: null,
-  liveShows: null,
-};
-
+const gallery = document.getElementById('gallery-dialog');
 const notice = document.querySelector('.notice');
-let noticeTimer;
-function showNotice(message) {
-  clearTimeout(noticeTimer);
-  notice.textContent = message;
-  notice.classList.add('visible');
-  noticeTimer = setTimeout(() => notice.classList.remove('visible'), 3500);
-}
-
-document.querySelectorAll('[data-destination]').forEach(button => {
-  const destination = destinations[button.dataset.destination];
-  if (destination) {
-    const link = document.createElement('a');
-    link.className = button.className;
-    link.style.cssText = button.style.cssText;
-    link.setAttribute('aria-label', button.getAttribute('aria-label') || button.textContent.trim());
-    link.href = destination;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.style.textDecoration = 'none';
-    link.replaceChildren(...button.childNodes);
-    button.replaceWith(link);
-  } else {
-    button.addEventListener('click', () => {
-      if (button.dataset.fallbackDialog) {
-        document.getElementById(button.dataset.fallbackDialog).showModal();
-      } else {
-        showNotice(`${button.getAttribute('aria-label') || button.textContent.trim()}-lenke kommer snart!`);
-      }
-    });
-  }
-});
-
-document.querySelectorAll('[data-dialog]').forEach(button => {
-  button.addEventListener('click', () => document.getElementById(button.dataset.dialog).showModal());
-});
-document.querySelectorAll('dialog').forEach(dialog => {
-  dialog.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => {
-    const bounds = dialog.getBoundingClientRect();
-    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
-  });
-});
+let timer;
+let galleryOpener;
+document.querySelectorAll('[data-gallery]').forEach(button => button.addEventListener('click', () => { galleryOpener = button; gallery.showModal(); }));
+gallery.querySelector('.close-dialog').addEventListener('click', () => gallery.close());
+gallery.addEventListener('close', () => galleryOpener?.focus());
+gallery.addEventListener('click', event => { const b=gallery.getBoundingClientRect(); if(event.target===gallery && (event.clientX<b.left || event.clientX>b.right || event.clientY<b.top || event.clientY>b.bottom)) gallery.close(); });
+document.querySelectorAll('[data-soon]').forEach(button => button.addEventListener('click', () => { clearTimeout(timer); notice.textContent = button.dataset.soon + ' — kommer snart!'; notice.classList.add('visible'); timer = setTimeout(() => notice.classList.remove('visible'), 3500); }));

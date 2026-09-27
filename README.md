@@ -1,9 +1,9 @@
-# Dunderfela Allstars
+# Dunderfela
 
-One-page website built from generated pencil artwork. The homepage uses the corrected artist names, instruments, contact details, a photo gallery, and pencil-shadow hover states for every navigation icon.
+The homepage uses the original JPEG from ../sketch, unchanged. Desktop and tablet position the original title, music staff, logo, three contacts, nine icons, copyright, and border as separate CSS crops across the viewport. At 600px and below, CSS displays crops of that same image in a readable vertical layout. No lettering or figures are regenerated.
 
-Run `npm run dev` and open http://127.0.0.1:4173.
+Run npm run dev and open http://127.0.0.1:4173. The server serves dist/. The matching docs/ files support the existing static publication layout. Keep both copies synchronized.
 
-- The resting artwork is `dist/assets/homepage.png`; its matching hover artwork is `dist/assets/homepage-hover.png`.
-- The clickable areas are in `dist/index.html` and their hover treatment is in `dist/artwork.css`.
-- Add the final social, video, press-kit, and live-show URLs in `dist/app.js`. The email, phone and gallery already work.
+Social links and Outlook compose links are in index.html. Foto opens all 10 images from ../photos. The other five icons show a coming-soon notice without external links. Hand-drawn accent strokes appear on hover, keyboard focus, and touch press. Original source assets and existing unrelated artwork are preserved.
+
+Run npm run check to check the JavaScript syntax.
