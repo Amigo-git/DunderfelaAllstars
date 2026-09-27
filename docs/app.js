@@ -1,5 +1,7 @@
 const gallery = document.getElementById('gallery-dialog');
 const notice = document.querySelector('.notice');
+const sketchMarks = '<svg class="ink-marks" viewBox="0 0 240 180" preserveAspectRatio="none" aria-hidden="true"><g><path d="M8 47l-12-9 M5 83l-14 2 M10 122l-11 12 M231 40l12-12 M235 80l15-2 M229 119l14 11"/><path class="echo" d="M9 48l-11-8 M5 86l-12 1 M12 123l-11 13 M232 42l12-11 M236 83l14-2 M230 122l13 10"/></g></svg>';
+document.querySelectorAll('.sketch-target').forEach(target => target.insertAdjacentHTML('beforeend', sketchMarks));
 let timer;
 let galleryOpener;
 document.querySelectorAll('[data-gallery]').forEach(button => button.addEventListener('click', () => { galleryOpener = button; gallery.showModal(); }));
