@@ -34,3 +34,9 @@ dialog{color:#24221e;background:#fff;border:1px solid #716b60;border-radius:3px 
 
 /* Sampled from the unmarked paper around the original ink artwork. */
 html,body{background:#fdfdfe}
+
+/* One unaltered sketch is the homepage at every viewport size. */
+.sheet{display:block!important;width:min(100%,1204px)!important;max-width:1204px!important;min-height:0!important;margin:0 auto!important;padding:0!important;isolation:auto!important}
+.original-sketch{display:block;position:relative;width:100%;line-height:0}.original-sketch>img{display:block;width:100%;height:auto}.original-sketch~*{display:none!important}.phone{display:none!important}
+.sketch-target{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border:0;border-radius:4px;background:transparent;cursor:pointer;padding:0;line-height:normal}.sketch-target:focus-visible{outline:2px dashed #5a564d;outline-offset:3px}.sketch-target:hover::after,.sketch-target:focus-visible::after{content:"";position:absolute;inset:7%;border:1.5px solid #302e29;border-radius:46% 52% 48% 54%;transform:rotate(-2deg);pointer-events:none}
+@media(max-width:600px){.sheet{display:block!important}.original-sketch{width:100%}}
