@@ -1,9 +1,9 @@
 # Dunderfela
 
-The homepage uses the original JPEG from ../sketch, unchanged. Desktop and tablet position the original title, music staff, logo, three contacts, nine icons, copyright, and border as separate CSS crops across the viewport. At 600px and below, CSS displays crops of that same image in a readable vertical layout. No lettering or figures are regenerated.
+The homepage displays the original hand-drawn sketch at every screen size. Contact and social links are in `dist/index.html`. Foto opens the ten images in `dist/assets/photos/`; the other icons show a coming-soon notice.
 
-Run npm run dev and open http://127.0.0.1:4173. The server serves dist/. The matching docs/ files support the existing static publication layout. Keep both copies synchronized.
+## Deployment
 
-Social links and Outlook compose links are in index.html. Foto opens all 10 images from ../photos. The other five icons show a coming-soon notice without external links. Hand-drawn accent strokes appear on hover, keyboard focus, and touch press. Original source assets and existing unrelated artwork are preserved.
+Edit site files only in `dist/`. Push to `main` to update [www.dunderfela.no](https://www.dunderfela.no/) through Vercel and [the GitHub Pages site](https://amigo-git.github.io/DunderfelaAllstars/) through the Pages workflow. Both publish the same `dist/` files.
 
-Run npm run check to check the JavaScript syntax.
+There is no build step. For a local preview, run `npm run dev` (`server.mjs`) and open `http://127.0.0.1:4173/`. Run `npm run check` to check the JavaScript syntax.
