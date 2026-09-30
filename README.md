@@ -1,6 +1,6 @@
 # Dunderfela
 
-The homepage displays the original hand-drawn sketch at every screen size. Contact and social links are in `dist/index.html`. Foto opens the ten images in `dist/assets/photos/`; the other icons show a coming-soon notice.
+The homepage displays the original hand-drawn sketch at every screen size. Names and social links are in `dist/index.html`; email addresses are displayed without links. Foto, Press kit, and Rider open Google Drive folders, and Spotify opens the band's album. Both logo drawings download the original image in `dist/assets/dunderfela-logo-original.jpg`. Live shows a coming-soon notice.
 
 ## Deployment
 
